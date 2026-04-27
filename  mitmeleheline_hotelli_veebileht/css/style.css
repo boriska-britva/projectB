@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* Основные стили */
 html, body {
     font-family: 'Segoe UI', 'Tahoma', 'Verdana', sans-serif;
     line-height: 1.7em;
@@ -13,7 +12,7 @@ html, body {
 
 /* Primary color */
 .text-primary {
-    color: #aae09d;   /* твой текущий цвет, можно поменять на #00ff00 */
+    color: #aae09d;
 }
 
 /* Container */
@@ -24,9 +23,9 @@ html, body {
     overflow: auto;
 }
 
-/* ====================== NAVBAR ====================== */
+/* navbar */
 #navbar {
-    background: #333;
+    background: #333333;
     color: #fff;
     overflow: auto;
 }
@@ -38,7 +37,7 @@ html, body {
 }
 
 #navbar h1 a {
-    color: #fff !important;           /* Логотип KHT белый */
+    color: #fff !important;
     font-size: 1.8rem;
     font-weight: bold;
 }
@@ -54,28 +53,27 @@ html, body {
     display: block;
     padding: 20px 25px;
     text-align: center;
-    color: #ffffff !important;        /* Все ссылки белые */
+    color: #ffffff !important;
     text-decoration: none;
 }
 
-/* Hover эффект */
+/* Hover */
 #navbar ul li a:hover {
     color: #00ff00 !important;
     background-color: rgba(0, 255, 0, 0.1);
 }
 
-/* Активная ссылка */
 #navbar ul li a.current {
     color: #00ff00 !important;
     background-color: rgba(0, 255, 0, 0.2);
 }
 
-/* ====================== Кнопка .btn ====================== */
+/* Btn */
 .btn {
     display: inline-block;
     background: #27ac27;
     color: #000 !important;
-    padding: 12px 28px;
+    padding: 10px 24px;
     border-radius: 5px;
     font-size: 1rem;
     font-weight: bold;
@@ -83,6 +81,7 @@ html, body {
     transition: all 0.3s ease;
     text-decoration: none;
     white-space: nowrap;
+    border: none;
 }
 
 .btn:hover {
@@ -91,7 +90,7 @@ html, body {
     box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
 }
 
-/* ====================== SHOWCASE ====================== */
+/* Showcases */
 #showcase {
     background: url('/img/showcase.jpg') no-repeat center center / cover;
     height: 800px;
@@ -115,7 +114,6 @@ html, body {
     font-size: 3.2rem;
     margin-bottom: 20px;
     line-height: 1.1;
-
 }
 
 #showcase p {
@@ -124,7 +122,7 @@ html, body {
     text-shadow: 0 2px 8px rgba(0,0,0,0.75);
 }
 
-/* ====================== INFO СЕКЦИЯ ====================== */
+/* Info */
 #info {
     height: 400px;
     display: flex;
@@ -140,7 +138,7 @@ html, body {
 
 #info .info-content {
     width: 50%;
-    background-color: #333;     /* тёмный фон */
+    background-color: #333;
     color: #fff;
     padding: 60px 40px;
     display: flex;
@@ -159,26 +157,7 @@ html, body {
     line-height: 1.6;
 }
 
-/* Кнопка */
-.btn {
-    display: inline-block;
-    background: #ddd8d8;
-    color: #000;
-    padding: 12px 40px;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
 
-.btn:hover {
-    background: #00cc00;
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.4);
-}
-
-/* Адаптив */
 @media (max-width: 768px) {
     #info {
         flex-direction: column;
@@ -186,6 +165,136 @@ html, body {
     }
     #info .info-img,
     #info .info-content {
+        width: 100%;
+    }
+}
+
+/* Features */
+#features {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+#features .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#features .box {
+    flex: 1;
+    padding: 45px 25px;
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+    transition: all 0.3s ease;
+}
+
+#features .box:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+}
+
+#features .box h3 {
+    margin: 25px 0 15px 0;
+    font-size: 1.65rem;
+}
+
+/* Eri värvid */
+#features .box.bg-dark {
+    background-color: #e0b528bd;
+    color: #fff;
+}
+
+#features .box.bg-dark h3,
+#features .box.bg-dark p {
+    color: #000000;
+}
+
+#features .box.bg-light {
+    background-color: #f1f1f1;     /* helehall */
+}
+
+#features i {
+    font-size: 3.2rem;
+    color: #aae09d;
+    margin-bottom: 10px;
+}
+
+
+@media (max-width: 992px) {
+    #features .container {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #444;
+    color: #fff;
+
+}
+
+/* clear */
+.clear {
+    clear: both;
+}
+
+/* about-info */
+
+#about-info {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+}
+
+#about-info .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+#about-info .info-left {
+    flex: 1;
+    min-width: 300px;
+}
+
+#about-info .info-right {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+#about-info .info-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+#about-info h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem;
+}
+
+#about-info p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    #about-info .container {
+        flex-direction: column;
+    }
+    
+    #about-info .info-left,
+    #about-info .info-right {
+        flex: none;
         width: 100%;
     }
 }
